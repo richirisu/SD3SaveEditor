@@ -190,6 +190,8 @@ Therefore, the range from 0020 to 7F is equivalent to ASCII for English, German 
 | 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | [<br/>⬜ | \\<br/>⬜ | ]<br/>⬜ | ll<br/>🟥 | …<br/>🟧 |
 | 006x | <br/>⬛ | a<br/>&nbsp; | b<br/>&nbsp; | c<br/>&nbsp; | d<br/>&nbsp; | e<br/>&nbsp; | f<br/>&nbsp; | g<br/>&nbsp; | h<br/>&nbsp; | i<br/>&nbsp; | j<br/>&nbsp; | k<br/>&nbsp; | l<br/>&nbsp; | m<br/>&nbsp; | n<br/>&nbsp; | o<br/>&nbsp; |
 | 007x | p<br/>&nbsp; | q<br/>&nbsp; | r<br/>&nbsp; | s<br/>&nbsp; | t<br/>&nbsp; | u<br/>&nbsp; | v<br/>&nbsp; | w<br/>&nbsp; | x<br/>&nbsp; | y<br/>&nbsp; | z<br/>&nbsp; | {<br/>⬜ | ¦<br/>⬜ | }<br/>⬜ | ˜<br/>⬜ | ‟<br/>🟧 |
+| 008x | à<br/>🟧 | è<br/>🟧 | é<br/>🟧 | ì<br/>🟧 | ò<br/>🟧 | ù<br/>🟧 | <br/>⬛ | <br/>⬛ | À<br/>🟧 | È<br/>🟧 | É<br/>🟧 | Ì<br/>🟧 | Ò<br/>🟧 | Ù<br/>🟧 | <br/>⬛ | ¿<br/>🟧 |
+| 009x | ¡<br/>🟧 | ｢<br/>🟧 | ｣<br/>🟧 | ○<br/>🟧 | ●<br/>🟧 | ×<br/>🟧 | <br/>⬛ | ‥<br/>🟧 | <br/>⬛ | ･<br/>🟧 | 🡅<br/>🟧 | 🡇<br/>🟧 | 🡄<br/>🟧 | 🡆<br/>🟧 | ▼<br/>🟧 | ♥︎<br/>🟧 |
 
 - 005E [ll] Two small L; no equivalent codepoint in Unicode, thus omitted
 - 005F […] Represents U+2026 HORIZONTAL ELLIPSIS […]
