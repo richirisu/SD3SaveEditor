@@ -440,6 +440,16 @@
           <string>Spanish by Magno and Vegetal Gibber</string>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>World (Multilingual Release 2019)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>World (Multilingual Release 2019) [Quotation Marks Fix]</string>
+         </property>
+        </item>
        </widget>
       </item>
       <item row="1" column="0">

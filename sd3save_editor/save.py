@@ -103,15 +103,17 @@ class BaseCharacterNameAdapter(Adapter):
     decoding_dict = {}
     encoding_dict = {}
 
+    codec = 'utf-16-le'
+
     def _decode(self, obj, context, path):
-        name = obj.decode('utf-16-le');
+        name = obj.decode(self.codec);
         name = "".join([self.decoding_dict[char] for char in name if char in self.decoding_dict])
         return name;
 
     def _encode(self, obj, context, path):
-        zeroes = bytearray(12)
         name = "".join([self.encoding_dict[char] for char in obj if char in self.encoding_dict])
-        name = name.encode('utf-16-le')
+        name = name.encode(self.codec)
+        zeroes = bytearray(self.subcon.length)
         for idx, char in enumerate(name):
             zeroes[idx] = char
         return zeroes
@@ -165,6 +167,24 @@ class SpanishCharacterNameAdapter(BaseCharacterNameAdapter):
         self.encoding_dict = game_data.parse_encoding_unicode_to_spanish_json()
 
 
+class WorldCharacterNameAdapter(BaseCharacterNameAdapter):
+
+    def __init__(self, subcon):
+        Adapter.__init__(self, subcon)
+        self.decoding_dict = game_data.parse_encoding_world_to_unicode_json()
+        self.encoding_dict = game_data.parse_encoding_unicode_to_world_json()
+        self.codec = 'latin-1'
+
+
+class WorldQuotFixCharacterNameAdapter(BaseCharacterNameAdapter):
+
+    def __init__(self, subcon):
+        Adapter.__init__(self, subcon)
+        self.decoding_dict = game_data.parse_encoding_world_to_unicode_quot_fix_json()
+        self.encoding_dict = game_data.parse_encoding_unicode_to_world_quot_fix_json()
+        self.codec = 'latin-1'
+
+
 class LocationAdapter(Adapter):
     """Location data appears to be loaded as a 12bit integer by the game
        This works around the absence of such a type in python core, it functions
@@ -188,6 +208,8 @@ class Language(Enum):
     ITALIAN = 4
     JAPANESE = 5
     SPANISH = 6
+    WORLD = 7
+    WORLD_QUOT_FIX = 8
 
 char_name_language = Language.ENGLISH;
 
@@ -198,6 +220,8 @@ char_name_adapter = Switch(lambda this: char_name_language, {
     Language.ITALIAN: ItalianCharacterNameAdapter(Bytes(12)),
     Language.JAPANESE: JapaneseCharacterNameAdapter(Bytes(12)),
     Language.SPANISH: SpanishCharacterNameAdapter(Bytes(12)),
+    Language.WORLD: WorldCharacterNameAdapter(Bytes(12)),
+    Language.WORLD_QUOT_FIX: WorldQuotFixCharacterNameAdapter(Bytes(12)),
 }, default=CharacterNameAdapter(Bytes(12)))
 
 char_header = Struct(
@@ -337,7 +361,8 @@ def check_valid_save(save_data) -> bool:
 
 def write_character_names(save_data, character_names, index=0):
     """Write character names to save data"""
-    if any(len(name) > 6 for name in character_names):
+    length = maximum_character_name_length();
+    if any(len(name) > length for name in character_names):
         raise NameTooLongException("One of the character names is too long")
     save_data[index].data.value.character_names = character_names
     save_data[index].header.char1.name = character_names[0]
@@ -366,6 +391,12 @@ def read_all_storage_items_amount(save_data, index=0):
             raise AmountTooBigException("Amount should be less than 100")
         items.append((item_name, amount))
     return items
+
+
+def maximum_character_name_length() -> int:
+    if char_name_language == Language.WORLD or char_name_language == Language.WORLD_QUOT_FIX:
+        return 12
+    return 6
 
 
 class NameTooLongException(Exception):

@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
         self.initChangeNameInput()
         self.initLanguageComboBox()
         self.autoLanguage = Language.ENGLISH;
+        self.updateChangeNameInput();
         self.updateLanguageComboBox();
         self.initSaveEvent()
         self.saveIndex = None
@@ -129,12 +130,15 @@ class MainWindow(QMainWindow):
         self.editedStorageItems[item.row()] = int(item.text())
 
     def initChangeNameInput(self):
-        self.ui.c1NameLineEdit.setMaxLength(6)
-        self.ui.c2NameLineEdit.setMaxLength(6)
-        self.ui.c3NameLineEdit.setMaxLength(6)
         self.ui.c1NameLineEdit.textChanged.connect(self.validateCharacterNames)
         self.ui.c2NameLineEdit.textChanged.connect(self.validateCharacterNames)
         self.ui.c3NameLineEdit.textChanged.connect(self.validateCharacterNames)
+
+    def updateChangeNameInput(self):
+        length = save.maximum_character_name_length()
+        self.ui.c1NameLineEdit.setMaxLength(length)
+        self.ui.c2NameLineEdit.setMaxLength(length)
+        self.ui.c3NameLineEdit.setMaxLength(length)
 
     def initLanguageComboBox(self):
         self.ui.languageComboBox.activated.connect(self.languageChanged)
@@ -148,6 +152,7 @@ class MainWindow(QMainWindow):
             save.char_name_language = self.autoLanguage
         else:
             save.char_name_language = Language(index)
+        self.updateChangeNameInput()
         self.validateCharacterNames()
 
     def validateCharacterNames(self):
@@ -216,6 +221,7 @@ class MainWindow(QMainWindow):
                 save.char_name_language = Language(self.autoLanguage.value)
             else:
                 save.char_name_language = Language(self.ui.languageComboBox.currentIndex())
+            self.updateChangeNameInput()
         if self.filename:
             try:
                 self.saveData = save.read_save(self.filename)
@@ -235,8 +241,15 @@ class MainWindow(QMainWindow):
     @staticmethod
     def detectLanguage(name):
         # orignal Japanese release
-        if (re.search(r"\ASeiken Densetsu 3 \((J|Japan)\)\Z", name, re.IGNORECASE)):
+        if (re.search(r"\ASeiken Densetsu 3 \((J|Japan)\)\Z", name, re.IGNORECASE)): # NOTE: final \Z
             return Language.JAPANESE
+        # switch release
+        if (re.search(r"\ATrials of Mana \((W|World)\)", name, re.IGNORECASE)): # NOTE: no final \Z
+            return Language.WORLD
+        if (re.search(r"(\A|\W)(Seiken Densetsu 3)\W.*\W(Seiken Densetsu Collection)(\Z|\W)", name, re.IGNORECASE)):
+            return Language.JAPANESE
+        if (re.search(r"(\A|\W)(Trials of Mana)\W.*\W(Collection of Mana)(\Z|\W)", name, re.IGNORECASE)):
+            return Language.WORLD
         # translation patches
         if (re.search(r"\A(SD3|SOM2|SEIKEN3)(E|EN|ENG)[0-9]*\Z", name, re.IGNORECASE)):
             return Language.ENGLISH

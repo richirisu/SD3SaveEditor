@@ -50,6 +50,14 @@ def parse_encoding_spanish_to_unicode_json() -> dict:
     return parse_json_game_data('encoding_spanish_to_unicode.json')
 
 
+def parse_encoding_world_to_unicode_json() -> dict:
+    return parse_json_game_data('encoding_world_to_unicode.json')
+
+
+def parse_encoding_world_to_unicode_quot_fix_json() -> dict:
+    return parse_json_game_data('encoding_world_to_unicode_quot_fix.json')
+
+
 def parse_encoding_unicode_to_english_json() -> dict:
     return parse_json_game_data('encoding_unicode_to_english.json')
 
@@ -72,3 +80,11 @@ def parse_encoding_unicode_to_japanese_json() -> dict:
 
 def parse_encoding_unicode_to_spanish_json() -> dict:
     return parse_json_game_data('encoding_unicode_to_spanish.json')
+
+
+def parse_encoding_unicode_to_world_json() -> dict:
+    return parse_json_game_data('encoding_unicode_to_world.json')
+
+
+def parse_encoding_unicode_to_world_quot_fix_json() -> dict:
+    return parse_json_game_data('encoding_unicode_to_world_quot_fix.json')

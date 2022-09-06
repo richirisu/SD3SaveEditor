@@ -68,4 +68,12 @@ def test_detect_language_from_filename():
     assert MainWindow.detectLanguage("Something [JAP]") == Language.JAPANESE
     assert MainWindow.detectLanguage("Something [ESP]") == Language.SPANISH
     assert MainWindow.detectLanguage("Something [SPA]") == Language.SPANISH
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (J) (Seiken Densetsu Collection)") == Language.JAPANESE
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) (Seiken Densetsu Collection)") == Language.JAPANESE
+    assert MainWindow.detectLanguage("Trials of Mana (W)") == Language.WORLD
+    assert MainWindow.detectLanguage("Trials of Mana (World)") == Language.WORLD
+    assert MainWindow.detectLanguage("Trials of Mana (W) (Collection of Mana)") == Language.WORLD
+    assert MainWindow.detectLanguage("Trials of Mana (World) (Collection of Mana)") == Language.WORLD
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 Something Seiken Densetsu Collection") == Language.JAPANESE
+    assert MainWindow.detectLanguage("Trials of Mana Something Collection of Mana") == Language.WORLD
 
