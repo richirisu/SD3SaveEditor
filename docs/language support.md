@@ -50,7 +50,7 @@ Please refer to the source code for the actual regular expressions.
     | | |
     | ---| --- |
     | **English** | en, eng, english |
-    | **French** | fr, fra, french, français, francais |
+    | **French** | fr, fra, fre, french, français, francais |
     | **German** | de, deu, ger, german, deutsch |
     | **Italian** | it, ita, italian, italiano |
     | **Japanese** | ja, jp, jap, japanese |

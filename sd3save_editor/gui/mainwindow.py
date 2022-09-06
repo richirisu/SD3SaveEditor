@@ -240,7 +240,7 @@ class MainWindow(QMainWindow):
         # translation patches
         if (re.search(r"\A(SD3|SOM2|SEIKEN3)(E|EN|ENG)[0-9]*\Z", name, re.IGNORECASE)):
             return Language.ENGLISH
-        if (re.search(r"\A(SD3|SOM2|SEIKEN3)(F|FR|FRA)[0-9]*\Z", name, re.IGNORECASE)):
+        if (re.search(r"\A(SD3|SOM2|SEIKEN3)(F|FR|FRA|FRE)[0-9]*\Z", name, re.IGNORECASE)):
             return Language.FRENCH
         if (re.search(r"\A(SD3|SOM2|SEIKEN3)(D|G|DE|DEU|GER)[0-9]*\Z", name, re.IGNORECASE)):
             return Language.GERMAN
@@ -267,7 +267,7 @@ class MainWindow(QMainWindow):
         # language codes
         if (re.search(r"(\A|\W)(en|eng|english)(\Z|\W)", name, re.IGNORECASE)):
             return Language.ENGLISH
-        if (re.search(r"(\A|\W)(fr|fra|french|français|francais)(\Z|\W)", name, re.IGNORECASE)):
+        if (re.search(r"(\A|\W)(fr|fra|fre|french|français|francais)(\Z|\W)", name, re.IGNORECASE)):
             return Language.FRENCH
         if (re.search(r"(\A|\W)(de|deu|ger|german|deutsch)(\Z|\W)", name, re.IGNORECASE)):
             return Language.GERMAN

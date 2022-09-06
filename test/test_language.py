@@ -20,6 +20,11 @@ def test_detect_language_from_filename():
     assert MainWindow.detectLanguage("Seiken Densetsu 3 (J)") == Language.JAPANESE
     assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan)") == Language.JAPANESE
     assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [En by LNF+Neill Corlett+SoM2Freak v1.01]") == Language.ENGLISH
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [T+Eng]") == Language.ENGLISH
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [T+Fre]") == Language.FRENCH
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [T+Ger]") == Language.GERMAN
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [T+Ita]") == Language.ITALIAN
+    assert MainWindow.detectLanguage("Seiken Densetsu 3 (Japan) [T+Spa]") == Language.SPANISH
     assert MainWindow.detectLanguage("english") == Language.ENGLISH
     assert MainWindow.detectLanguage("french") == Language.FRENCH
     assert MainWindow.detectLanguage("français") == Language.FRENCH
@@ -56,6 +61,7 @@ def test_detect_language_from_filename():
     assert MainWindow.detectLanguage("Something [SP]") == Language.SPANISH
     assert MainWindow.detectLanguage("Something [ENG]") == Language.ENGLISH
     assert MainWindow.detectLanguage("Something [FRA]") == Language.FRENCH
+    assert MainWindow.detectLanguage("Something [FRE]") == Language.FRENCH
     assert MainWindow.detectLanguage("Something [DEU]") == Language.GERMAN
     assert MainWindow.detectLanguage("Something [GER]") == Language.GERMAN
     assert MainWindow.detectLanguage("Something [ITA]") == Language.ITALIAN
