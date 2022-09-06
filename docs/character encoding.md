@@ -1,19 +1,251 @@
 # Character Encoding
 
+This document describes the character encoding details of the original release of Seiken Densetsu 3 for the Super Famicom from 1995 and any fan translation based thereof. There are translation patches in English, German, French, Italian and Spanish.
+
+## Encoding Tables
+
+**Color Markings**
+
+⇒ does not apply to the Japanese encoding table
+
+- Matching ASCII characters are not marked
+- ASCII characters different from the Japanese encoding are marked with a white square
+- Original characters of the English encoding are marked with a yellow square
+- Original characters different from the English encoding are marked with an orange square
+- Conflicting characters are marked with a red square
+- Unencoded characters are marked with a black square
+
+### Japanese
+
+Japanese uses the full-width variant for all Latin characters (with the few exceptions of 0022 [”], 0023 [“], 0024 [▼], 0026 [‘], 0027 [’], 003E [○], 0040 [●], 005B [×], 005C […], 007E [♥︎], 020F [🡆], 02CB [🡄], 02CC [🡇], 0313 [🡅]). Note that most full-width fonts will render these characters as full-width, respectively.
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x | 　 | ！ | ” | “ | ▼ | ％ | ‘ | ’ | （ | ） | ＊ | ＋ | ， | － | ． | ／ |
+| 003x | ０ | １ | ２ | ３ | ４ | ５ | ６ | ７ | ８ | ９ | ： | 「 | 」 | ＝ | ○ | ？ |
+| 004x | ● | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ | Ｉ | Ｊ | Ｋ | Ｌ | Ｍ | Ｎ | Ｏ |
+| 005x | Ｐ | Ｑ | Ｒ | Ｓ | Ｔ | Ｕ | Ｖ | Ｗ | Ｘ | Ｙ | Ｚ | × | … | 時 | 月 | 日 |
+| 006x | ～ | ａ | ｂ | ｃ | ｄ | ｅ | ｆ | ｇ | ｈ | ｉ | ｊ | ｋ | ｌ | ｍ | ｎ | ｏ |
+| 007x | ｐ | ｑ | ｒ | ｓ | ｔ | ｕ | ｖ | ｗ | ｘ | ｙ | ｚ | 、 | 。 | ー | ♥︎ | あ |
+| 008x | い | う | え | お | か | き | く | け | こ | さ | し | す | せ | そ | た | ち |
+| 009x | つ | て | と | な | に | ぬ | ね | の | は | ひ | ふ | へ | ほ | ま | み | む |
+| 00Ax | め | も | や | ゆ | よ | ら | り | る | れ | ろ | わ | を | ん | っ | ゃ | ゅ |
+| 00Bx | ょ | ぁ | ぃ | ぅ | ぇ | ぉ | ッ | ャ | ュ | ョ | ァ | ィ | ゥ | ェ | ォ | ア |
+| 00Cx | イ | ウ | エ | オ | カ | キ | ク | ケ | コ | サ | シ | ス | セ | ソ | タ | チ |
+| 00Dx | ツ | テ | ト | ナ | ニ | ヌ | ネ | ノ | ハ | ヒ | フ | ヘ | ホ | マ | ミ | ム |
+| 00Ex | メ | モ | ヤ | ユ | ヨ | ラ | リ | ル | レ | ロ | ワ | ヲ | ン | が | ぎ | ぐ |
+| 00Fx | げ | ご | ざ | じ | ず | ぜ | ぞ | だ | ぢ | づ | で | ど | ば | び | ぶ | べ |
+| 010x | ぼ | ガ | ギ | グ | ゲ | ゴ | ザ | ジ | ズ | ゼ | ゾ | ダ | ヂ | ヅ | デ | ド |
+| 011x | バ | ビ | ブ | ベ | ボ | ヴ | ぱ | ぴ | ぷ | ぺ | ぽ | パ | ピ | プ | ペ | ポ |
+| 012x | 『 | 王 | 人 | 魔 | 様 | 獣 | 行 | 女 | 私 | 光 | 法 | ＿ | 国 | 見 | 聖 | 力 |
+| 013x | 司 | 祭 | 都 | 剣 | 間 | 子 | 兵 | 出 | 神 | 攻 | 手 | 風 | 大 | 城 | 敵 | 師 |
+| 014x | 方 | 英 | 入 | 雄 | 中 | 町 | 界 | 導 | 何 | 母 | 地 | 火 | 使 | 者 | 聞 | 精 |
+| 015x | 思 | 死 | 達 | 世 | 前 | 待 | 男 | 夜 | 気 | 言 | 事 | 変 | 紅 | 知 | 回 | 今 |
+| 016x | 生 | 目 | 士 | 』 | 近 | 撃 | 霊 | 蓮 | 窟 | 船 | 洞 | 道 | 会 | 金 | 域 | 最 |
+| 017x | 上 | 下 | 戦 | 備 | 武 | 命 | 屋 | 器 | 呪 | 滝 | 父 | 来 | 港 | 市 | 心 | 像 |
+| 018x | 復 | 明 | 装 | 盗 | 薬 | 悪 | 水 | 用 | 理 | 一 | 開 | 喰 | 術 | 仲 | 話 | 賊 |
+| 019x | 竜 | 旅 | 強 | 自 | 守 | 杖 | 不 | 押 | 森 | 村 | 動 | 闇 | 原 | 団 | 名 | 軍 |
+| 01Ax | 宿 | 召 | 侵 | 身 | 代 | 内 | 分 | 急 | 殺 | 斬 | 石 | 定 | 殿 | 必 | 領 | ・ |
+| 01Bx | 衣 | 喚 | 古 | 始 | 性 | 全 | 誰 | 伝 | 土 | 木 | 以 | 黄 | 後 | 黒 | 込 | 塞 |
+| 01Cx | 山 | 持 | 失 | 場 | 親 | 先 | 通 | 々 | 炎 | 外 | 館 | 騎 | 空 | 体 | 脱 | 防 |
+| 01Dx | 木 | 与 | 立 | 裂 | 高 | 樹 | 商 | 消 | 真 | 早 | 草 | 部 | 落 | 休 | 教 | 橋 |
+| 01Ex | 穴 | 邪 | 主 | 勝 | 信 | 説 | 占 | 選 | 槍 | 弟 | 天 | 宝 | 亡 | 戻 | 化 | 供 |
+| 01Fx | 銀 | 血 | 再 | 残 | 止 | 所 | 旋 | 着 | 瞳 | 能 | 秘 | 陛 | 返 | 影 | 花 | 我 |
+| 020x | 顔 | 兄 | 決 | 結 | 交 | 口 | 助 | 同 | 白 | 氷 | 品 | 封 | 要 | 牢 | 狼 | 🡆 |
+| 021x | 安 | 暗 | 囲 | 運 | 牙 | 換 | 技 | 泣 | 業 | 具 | 刑 | 元 | 呼 | 湖 | 御 | 根 |
+| 022x | 砂 | 作 | 首 | 周 | 少 | 雪 | 走 | 属 | 他 | 谷 | 帝 | 投 | 毒 | 姫 | 夢 | 雷 |
+| 023x | 裏 | 流 | 印 | 音 | 家 | 幻 | 庫 | 寝 | 跡 | 設 | 倉 | 的 | 闘 | 突 | 飛 | 壁 |
+| 024x | 帽 | 娘 | 滅 | 油 | 由 | 【 | 】 | 愛 | 羽 | 奥 | 海 | 各 | 革 | 帰 | 玉 | 建 |
+| 025x | 枯 | 向 | 考 | 実 | 若 | 種 | 新 | 声 | 争 | 続 | 追 | 度 | 逃 | 波 | 彼 | 表 |
+| 026x | 負 | 物 | 砲 | 北 | 味 | 面 | 友 | 輪 | 遺 | 危 | 許 | 胸 | 禁 | 減 | 現 | 合 |
+| 027x | 昨 | 治 | 終 | 住 | 盾 | 初 | 書 | 星 | 西 | 昔 | 単 | 頂 | 東 | 当 | 頭 | 忍 |
+| 028x | 熱 | 売 | 妃 | 百 | 文 | 望 | 妹 | 密 | 眠 | 無 | 傭 | 妖 | 乱 | 冷 | 烈 | 連 |
+| 029x | ［ | ］ | 異 | 仮 | 加 | 可 | 解 | 街 | 岳 | 寒 | 感 | 岩 | 機 | 脚 | 仂 | 去 |
+| 02Ax | 漁 | 極 | 恵 | 拳 | 犬 | 好 | 孔 | 頃 | 在 | 姿 | 糸 | 次 | 取 | 小 | 数 | 青 |
+| 02Bx | 赤 | 切 | 想 | 増 | 息 | 足 | 対 | 帯 | 隊 | 長 | 直 | 底 | 鉄 | 南 | 難 | 配 |
+| 02Cx | 発 | 技 | 半 | 避 | 閉 | 放 | 霧 | 迷 | 野 | 了 | 零 | 🡄 | 🡇 | 違 | 井 | 右 |
+| 02Dx | 雨 | 遠 | 怪 | 巻 | 関 | 岸 | 期 | 吸 | 宮 | 巨 | 苦 | 君 | 系 | 賢 | 戸 | 護 |
+| 02Ex | 航 | 降 | 字 | 示 | 室 | 灼 | 弱 | 受 | 集 | 十 | 常 | 清 | 飾 | 色 | 進 | 針 |
+| 02Fx | 陣 | 勢 | 成 | 相 | 送 | 憎 | 族 | 打 | 退 | 短 | 段 | 値 | 昼 | 朝 | 調 | 怒 |
+| 030x | 倒 | 塔 | 読 | 謎 | 反 | 皮 | 病 | 貧 | 舞 | 嘖 | 平 | 別 | 辺 | 未 | 勇 | 利 |
+| 031x | 率 | 両 | 涙 | 🡅 | 阿 | 位 | 意 | 液 | 荷 | 害 | 格 | 覚 | 完 | 官 | 汗 | 希 |
+| 032x | 美 | 貴 | 公 | 探 | 良 | 耀 | 起 | 乗 | 島 | 魂 | 幽 | 念 | 眼 | 活 | 超 | 伯 |
+| 033x | 爵 | 堕 | 救 | 共 | 果 | 断 | 忘 | 年 | 効 | 困 | 存 | 予 | 然 | 仕 | 多 | 二 |
+| 034x | 植 | 絶 | 態 | 悲 | 惑 | 恐 | 険 | 捨 | 静 | 幼 | 引 | 収 | 途 | 畑 | 翼 | 廊 |
+| 035x | 客 | 庭 | 得 | 敗 | 買 | 泊 | 役 | 和 | 広 | 造 | 匹 | 有 | 路 | 育 | 改 | 却 |
+| 036x | 逆 | 深 | 吹 | 遅 | 珍 | 令 | 永 | 過 | 階 | 継 | 刻 | 支 | 状 | 食 | 板 | 礼 |
+| 037x | 老 | 係 | 験 | 重 | 証 | 干 | 潜 | 側 | 孫 | 暖 | 箱 | 粉 | 墓 | 欲 | 緑 | 恋 |
+| 038x | 員 | 学 | 記 | 義 | 凶 | 経 | 欠 | 悟 | 幸 | 左 | 災 | 散 | 産 | 修 | 正 | 醒 |
+| 039x | 素 | 太 | 笛 | 店 | 透 | 背 | 媒 | 爆 | 歩 | 末 | 矢 | 林 | 例 | 弓 | 語 | 更 |
+| 03Ax | 荒 | 罪 | 耳 | 祝 | 将 | 晶 | 象 | 賞 | 触 | 寸 | 線 | 創 | 低 | 転 | 統 | 伏 |
+| 03Bx | 門 | 練 | 労 | 移 | 円 | 恩 | 温 | 灰 | 境 | 狂 | 件 | 権 | 玄 | 虎 | 枝 | 誌 |
+| 03Cx | 射 | 朱 | 週 | 純 | 処 | 除 | 昇 | 衝 | 雀 | 制 | 善 | 僧 | 巣 | 弾 | 点 | 凍 |
+| 03Dx | 破 | 馬 | 杯 | 髮 | 胞 | 枚 | 民 | 綿 | 毛 | 猛 | 羅 | 燕 | 塩 | 乙 | 画 | 冠 |
+| 03Ex | 球 | 刑 | 絹 | 候 | 功 | 香 | 彩 | 疾 | 蛇 | 従 | 匠 | 床 | 浄 | 図 | 銭 | 閃 |
+| 03Fx | 但 | 鳥 | 刀 | 浜 | 夕 | 曜 | 葉 | 陽 | 嵐 | 里 | 侶 | 臨 |  |  |  |
+
+- 0020 [　] Represents U+3000 IDEOGRAPHIC SPACE [　], the full-width equivalent of U+0020 SPACE (SP) [ ]
+- 0022 [”] Represents U+201D RIGHT DOUBLE QUOTATION MARK [”] and is not a full-width character; note that unlike the single quotation marks the left and right double quotation marks are in reversed order
+- 0023 [“] Represents U+201C LEFT DOUBLE QUOTATION MARK [“] and is not a full-width character
+- 0026 [‘] Represents U+2018 LEFT SINGLE QUOTATION MARK [‘] and is not a full-width character
+- 0027 [’] Represents U+2019 RIGHT SINGLE QUOTATION MARK [’] and is not a full-width character
+- 003E [○] Represents U+25CB WHITE CIRCLE [○]
+- 0040 [●] Represents U+25CF BLACK CIRCLE [●]
+- 005B [×] Represents U+00D7 MULTIPLICATION SIGN [×] and as such is not a typical full-width character; known in Japan as “batsu”
+- 005C […] The U+2026 HORIZONTAL ELLIPSIS […] is shared by full-width and half-width fonts alike, with most full-width fonts rendering the dots in the middle of the line
+- 007D [ー] Represents U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK [ー]
+- 01AF [・] Represents U+30FB KATAKANA MIDDLE DOT [・]
+- 012B [＿] Represents U+FF3F FULLWIDTH LOW LINE [＿], the full-width equivalent of U+005F LOW LINE [_]
+
+### English
+
+The European languages use the normal half-width variant for all Latin characters.
+
+Therefore, the range from 0020 to 7F is equivalent to ASCII for English, German and French, and with exceptions for Italian and Spanish.
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x |   | !<br/>&nbsp; | "<br/>⬜ | #<br/>⬜ | $<br/>⬜ | %<br/>&nbsp; | &<br/>⬜ | '<br/>⬜ | (<br/>&nbsp; | )<br/>&nbsp; | ∗<br/>&nbsp; | +<br/>&nbsp; | ,<br/>&nbsp; | −<br/>&nbsp; | .<br/>&nbsp; | /<br/>&nbsp; |
+| 003x | 0<br/>&nbsp; | 1<br/>&nbsp; | 2<br/>&nbsp; | 3<br/>&nbsp; | 4<br/>&nbsp; | 5<br/>&nbsp; | 6<br/>&nbsp; | 7<br/>&nbsp; | 8<br/>&nbsp; | 9<br/>&nbsp; | :<br/>&nbsp; | ;<br/>⬜ | <<br/>⬜ | =<br/>&nbsp; | ><br/>⬜ | ?<br/>&nbsp; |
+| 004x | @<br/>⬜ | A<br/>&nbsp; | B<br/>&nbsp; | C<br/>&nbsp; | D<br/>&nbsp; | E<br/>&nbsp; | F<br/>&nbsp; | G<br/>&nbsp; | H<br/>&nbsp; | I<br/>&nbsp; | J<br/>&nbsp; | K<br/>&nbsp; | L<br/>&nbsp; | M<br/>&nbsp; | N<br/>&nbsp; | O<br/>&nbsp; |
+| 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | [<br/>⬜ | \\<br/>⬜ | ]<br/>⬜ | ^<br/>⬜ | _<br/>⬜ |
+| 006x | `<br/>⬜ | a<br/>&nbsp; | b<br/>&nbsp; | c<br/>&nbsp; | d<br/>&nbsp; | e<br/>&nbsp; | f<br/>&nbsp; | g<br/>&nbsp; | h<br/>&nbsp; | i<br/>&nbsp; | j<br/>&nbsp; | k<br/>&nbsp; | l<br/>&nbsp; | m<br/>&nbsp; | n<br/>&nbsp; | o<br/>&nbsp; |
+| 007x | p<br/>&nbsp; | q<br/>&nbsp; | r<br/>&nbsp; | s<br/>&nbsp; | t<br/>&nbsp; | u<br/>&nbsp; | v<br/>&nbsp; | w<br/>&nbsp; | x<br/>&nbsp; | y<br/>&nbsp; | z<br/>&nbsp; | {<br/>⬜ | ¦<br/>⬜ | }<br/>⬜ | ˜<br/>⬜ | □<br/>🟨 |
+| 008x | <br/>⬛ | ｢<br/>🟨 | ｣<br/>🟨 | ○<br/>🟨 | ●<br/>🟨 | ×<br/>🟨 | ‥<br/>🟨 | ･<br/>🟨 | 🡅<br/>🟨 | 🡇<br/>🟨 | 🡄<br/>🟨 | 🡆<br/>🟨 | ▼<br/>🟨 | ♥︎<br/>🟨 | <br/>⬛ | &<br/>🟥 |
+| 009x | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ |
+
+- 0020 [ ] Represents U+0020 SPACE (SP) [ ]
+- 002A [∗] Using U+204E LOW ASTERISK [∗] for display instead of U+002A ASTERISK [*]
+- 002D [−] Using U+2212 MINUS SIGN [−] for display instead of U+002D HYPHEN-MINUS [-]
+- 007C [¦] Using U+00A6 BROKEN BAR [¦] for display instead of U+007C VERTICAL LINE [|]
+- 007E [˜] Using U+02DC SMALL TILDE [˜] for display instead of U+007E TILDE [~]
+- 007F [□] Represents U+25A1 WHITE SQUARE [□]
+- 0081 [｢] Represents U+FF62 HALFWIDTH LEFT CORNER BRACKET [｢]
+- 0082 [｣] Represents U+FF63 HALFWIDTH RIGHT CORNER BRACKET [｣]
+- 0083 [○] Represents U+25CB WHITE CIRCLE [○]
+- 0084 [●] Represents U+25CF BLACK CIRCLE [●]
+- 0085 [×] Represents U+00D7 MULTIPLICATION SIGN [×]
+- 0086 [‥] Represents U+2025 TWO DOT LEADER [‥]
+- 0087 [･] Represents U+FF65 HALFWIDTH KATAKANA MIDDLE DOT [･]; an alternative might be U+2022 BULLET [•], the black small circle
+- 008C [▼] Represents U+25BC BLACK DOWN-POINTING TRIANGLE [▼]
+- 008D [♥︎] Represents U+2665 BLACK HEART SUIT [♥︎]; an alternative might be U+2764 HEAVY BLACK HEART [❤︎], the emoji red heart
+- 008F [&] Already defined as 0026 [&]; omitted
+
+### French
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x |   | !<br/>&nbsp; | "<br/>⬜ | #<br/>⬜ | $<br/>⬜ | %<br/>&nbsp; | &<br/>⬜ | '<br/>⬜ | (<br/>&nbsp; | )<br/>&nbsp; | ∗<br/>&nbsp; | +<br/>&nbsp; | ,<br/>&nbsp; | −<br/>&nbsp; | .<br/>&nbsp; | /<br/>&nbsp; |
+| 003x | 0<br/>&nbsp; | 1<br/>&nbsp; | 2<br/>&nbsp; | 3<br/>&nbsp; | 4<br/>&nbsp; | 5<br/>&nbsp; | 6<br/>&nbsp; | 7<br/>&nbsp; | 8<br/>&nbsp; | 9<br/>&nbsp; | :<br/>&nbsp; | ;<br/>⬜ | <<br/>⬜ | =<br/>&nbsp; | ><br/>⬜ | ?<br/>&nbsp; |
+| 004x | @<br/>⬜ | A<br/>&nbsp; | B<br/>&nbsp; | C<br/>&nbsp; | D<br/>&nbsp; | E<br/>&nbsp; | F<br/>&nbsp; | G<br/>&nbsp; | H<br/>&nbsp; | I<br/>&nbsp; | J<br/>&nbsp; | K<br/>&nbsp; | L<br/>&nbsp; | M<br/>&nbsp; | N<br/>&nbsp; | O<br/>&nbsp; |
+| 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | [<br/>⬜ | \\<br/>⬜ | ]<br/>⬜ | ^<br/>⬜ | _<br/>⬜ |
+| 006x | `<br/>⬜ | a<br/>&nbsp; | b<br/>&nbsp; | c<br/>&nbsp; | d<br/>&nbsp; | e<br/>&nbsp; | f<br/>&nbsp; | g<br/>&nbsp; | h<br/>&nbsp; | i<br/>&nbsp; | j<br/>&nbsp; | k<br/>&nbsp; | l<br/>&nbsp; | m<br/>&nbsp; | n<br/>&nbsp; | o<br/>&nbsp; |
+| 007x | p<br/>&nbsp; | q<br/>&nbsp; | r<br/>&nbsp; | s<br/>&nbsp; | t<br/>&nbsp; | u<br/>&nbsp; | v<br/>&nbsp; | w<br/>&nbsp; | x<br/>&nbsp; | y<br/>&nbsp; | z<br/>&nbsp; | {<br/>⬜ | ¦<br/>⬜ | }<br/>⬜ | ˜<br/>⬜ | □<br/>🟨 |
+| 008x | <br/>⬛ | ｢<br/>🟨 | ｣<br/>🟨 | ê<br/>🟥 | é<br/>🟥 | è<br/>🟥 | ‥<br/>🟨 | ･<br/>🟨 | 🡅<br/>🟨 | 🡇<br/>🟨 | 🡄<br/>🟨 | 🡆<br/>🟨 | ▼<br/>🟨 | ♥︎<br/>🟨 | é<br/>🟧 | è<br/>🟧 |
+| 009x | ê<br/>🟧 | ï<br/>🟧 | ù<br/>🟧 | à<br/>🟧 | â<br/>🟧 | î<br/>🟧 | ô<br/>🟧 | û<br/>🟧 | ç<br/>🟧 | ×<br/>🟧 | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ |
+
+- 007F [□] Represents U+25A1 WHITE SQUARE [□]
+- 0081 [｢] Represents U+FF62 HALFWIDTH LEFT CORNER BRACKET [｢]
+- 0082 [｣] Represents U+FF63 HALFWIDTH RIGHT CORNER BRACKET [｣]
+- 0083 [ê] / 0084 [é] / 0085 [è] Already defined as 008E [é] / 008F [è] / 0090 [ê]; omitted
+- 0086 [‥] Represents U+2025 TWO DOT LEADER [‥]
+- 0087 [･] Represents U+FF65 HALFWIDTH KATAKANA MIDDLE DOT [･]; an alternative might be U+2022 BULLET [•], the black small circle
+- 008C [▼] Represents U+25BC BLACK DOWN-POINTING TRIANGLE [▼]
+- 008D [♥︎] Represents U+2665 BLACK HEART SUIT [♥︎]; an alternative might be U+2764 HEAVY BLACK HEART [❤︎], the emoji red heart
+- 0099 [×] Represents U+00D7 MULTIPLICATION SIGN [×]
+
+### German
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x |   | !<br/>&nbsp; | "<br/>⬜ | #<br/>⬜ | $<br/>⬜ | %<br/>&nbsp; | &<br/>⬜ | '<br/>⬜ | (<br/>&nbsp; | )<br/>&nbsp; | ∗<br/>&nbsp; | +<br/>&nbsp; | ,<br/>&nbsp; | −<br/>&nbsp; | .<br/>&nbsp; | /<br/>&nbsp; |
+| 003x | 0<br/>&nbsp; | 1<br/>&nbsp; | 2<br/>&nbsp; | 3<br/>&nbsp; | 4<br/>&nbsp; | 5<br/>&nbsp; | 6<br/>&nbsp; | 7<br/>&nbsp; | 8<br/>&nbsp; | 9<br/>&nbsp; | :<br/>&nbsp; | ;<br/>⬜ | <<br/>⬜ | =<br/>&nbsp; | ><br/>⬜ | ?<br/>&nbsp; |
+| 004x | @<br/>⬜ | A<br/>&nbsp; | B<br/>&nbsp; | C<br/>&nbsp; | D<br/>&nbsp; | E<br/>&nbsp; | F<br/>&nbsp; | G<br/>&nbsp; | H<br/>&nbsp; | I<br/>&nbsp; | J<br/>&nbsp; | K<br/>&nbsp; | L<br/>&nbsp; | M<br/>&nbsp; | N<br/>&nbsp; | O<br/>&nbsp; |
+| 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | [<br/>⬜ | \\<br/>⬜ | ]<br/>⬜ | ^<br/>⬜ | _<br/>⬜ |
+| 006x | `<br/>⬜ | a<br/>&nbsp; | b<br/>&nbsp; | c<br/>&nbsp; | d<br/>&nbsp; | e<br/>&nbsp; | f<br/>&nbsp; | g<br/>&nbsp; | h<br/>&nbsp; | i<br/>&nbsp; | j<br/>&nbsp; | k<br/>&nbsp; | l<br/>&nbsp; | m<br/>&nbsp; | n<br/>&nbsp; | o<br/>&nbsp; |
+| 007x | p<br/>&nbsp; | q<br/>&nbsp; | r<br/>&nbsp; | s<br/>&nbsp; | t<br/>&nbsp; | u<br/>&nbsp; | v<br/>&nbsp; | w<br/>&nbsp; | x<br/>&nbsp; | y<br/>&nbsp; | z<br/>&nbsp; | {<br/>⬜ | ¦<br/>⬜ | }<br/>⬜ | ˜<br/>⬜ | <br/>⬛ |
+| 008x | <br/>⬛ | ｢<br/>🟨 | ｣<br/>🟨 | ä<br/>🟥 | ö<br/>🟥 | ü<br/>🟥 | ‥<br/>🟨 | ･<br/>🟨 | 🡅<br/>🟨 | 🡇<br/>🟨 | 🡄<br/>🟨 | 🡆<br/>🟨 | ▼<br/>🟨 | ♥︎<br/>🟨 | Ä<br/>🟧 | ä<br/>🟧 |
+| 009x | Ö<br/>🟧 | ö<br/>🟧 | Ü<br/>🟧 | ü<br/>🟧 | ß<br/>🟧 | ẞ<br/>🟧 | „<br/>🟧 | “<br/>🟧 | ●<br/>🟧 | ×<br/>🟧 | f.<br/>🟥 | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ | <br/>⬛ |
+
+- 0081 [｢] Represents U+FF62 HALFWIDTH LEFT CORNER BRACKET [｢]
+- 0082 [｣] Represents U+FF63 HALFWIDTH RIGHT CORNER BRACKET [｣]
+- 0083 [ä] and 0084 [ö] and 0085 [ü] Already defined as 008F [ä] and 0091 [ö] and 0093 [ü]; omitted
+- 0086 [‥] Represents U+2025 TWO DOT LEADER [‥]
+- 0087 [･] Represents U+FF65 HALFWIDTH KATAKANA MIDDLE DOT [･]; an alternative might be U+2022 BULLET [•], the black small circle
+- 008C [▼] Represents U+25BC BLACK DOWN-POINTING TRIANGLE [▼]
+- 008D [♥︎] Represents U+2665 BLACK HEART SUIT [♥︎]; an alternative might be U+2764 HEAVY BLACK HEART [❤︎], the emoji red heart
+- 0094 [ß] Represents U+00DF LATIN SMALL LETTER SHARP S [ß]
+- 0095 [ẞ] Represents U+1E9E LATIN CAPITAL LETTER SHARP S [ẞ]
+- 0098 [●] Represents U+25CF BLACK CIRCLE [●]
+- 0099 [×] Represents U+00D7 MULTIPLICATION SIGN [×]
+- 009A [f.] A small F followed by a dot; omitted
+
+### Italian
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x |   | !<br/>&nbsp; | "<br/>⬜ | #<br/>⬜ | $<br/>⬜ | %<br/>&nbsp; | &<br/>⬜ | '<br/>⬜ | (<br/>&nbsp; | )<br/>&nbsp; | ∗<br/>&nbsp; | +<br/>&nbsp; | ,<br/>&nbsp; | −<br/>&nbsp; | .<br/>&nbsp; | /<br/>&nbsp; |
+| 003x | 0<br/>&nbsp; | 1<br/>&nbsp; | 2<br/>&nbsp; | 3<br/>&nbsp; | 4<br/>&nbsp; | 5<br/>&nbsp; | 6<br/>&nbsp; | 7<br/>&nbsp; | 8<br/>&nbsp; | 9<br/>&nbsp; | :<br/>&nbsp; | ;<br/>⬜ | <<br/>⬜ | =<br/>&nbsp; | ><br/>⬜ | ?<br/>&nbsp; |
+| 004x | @<br/>⬜ | A<br/>&nbsp; | B<br/>&nbsp; | C<br/>&nbsp; | D<br/>&nbsp; | E<br/>&nbsp; | F<br/>&nbsp; | G<br/>&nbsp; | H<br/>&nbsp; | I<br/>&nbsp; | J<br/>&nbsp; | K<br/>&nbsp; | L<br/>&nbsp; | M<br/>&nbsp; | N<br/>&nbsp; | O<br/>&nbsp; |
+| 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | [<br/>⬜ | \\<br/>⬜ | ]<br/>⬜ | ll<br/>🟥 | …<br/>🟧 |
+| 006x | <br/>⬛ | a<br/>&nbsp; | b<br/>&nbsp; | c<br/>&nbsp; | d<br/>&nbsp; | e<br/>&nbsp; | f<br/>&nbsp; | g<br/>&nbsp; | h<br/>&nbsp; | i<br/>&nbsp; | j<br/>&nbsp; | k<br/>&nbsp; | l<br/>&nbsp; | m<br/>&nbsp; | n<br/>&nbsp; | o<br/>&nbsp; |
+| 007x | p<br/>&nbsp; | q<br/>&nbsp; | r<br/>&nbsp; | s<br/>&nbsp; | t<br/>&nbsp; | u<br/>&nbsp; | v<br/>&nbsp; | w<br/>&nbsp; | x<br/>&nbsp; | y<br/>&nbsp; | z<br/>&nbsp; | {<br/>⬜ | ¦<br/>⬜ | }<br/>⬜ | ˜<br/>⬜ | ‟<br/>🟧 |
+
+- 005E [ll] Two small L; no equivalent codepoint in Unicode, thus omitted
+- 005F […] Represents U+2026 HORIZONTAL ELLIPSIS […]
+- 007F [‟] Might represent U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK; unused in any language as far as I know
+- 0091 [｢] Represents U+FF62 HALFWIDTH LEFT CORNER BRACKET [｢]
+- 0092 [｣] Represents U+FF63 HALFWIDTH RIGHT CORNER BRACKET [｣]
+- 0093 [○] Represents U+25CB WHITE CIRCLE [○]
+- 0094 [●] Represents U+25CF BLACK CIRCLE [●]
+- 0095 [×] Represents U+00D7 MULTIPLICATION SIGN [×]
+- 0097 [‥] Represents U+2025 TWO DOT LEADER [‥]
+- 0099 [･] Represents U+FF65 HALFWIDTH KATAKANA MIDDLE DOT [･]; an alternative might be U+2022 BULLET [•], the black small circle
+- 009E [▼] Represents U+25BC BLACK DOWN-POINTING TRIANGLE [▼]
+- 009F [♥︎] Represents U+2665 BLACK HEART SUIT [♥︎]; an alternative might be U+2764 HEAVY BLACK HEART [❤︎], the emoji red heart
+
+### Spanish
+
+|  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 002x |   | !<br/>&nbsp; | "<br/>⬜ | #<br/>⬜ | $<br/>⬜ | %<br/>&nbsp; | &<br/>⬜ | '<br/>⬜ | (<br/>&nbsp; | )<br/>&nbsp; | ∗<br/>&nbsp; | +<br/>&nbsp; | ,<br/>&nbsp; | −<br/>&nbsp; | .<br/>&nbsp; | /<br/>&nbsp; |
+| 003x | 0<br/>&nbsp; | 1<br/>&nbsp; | 2<br/>&nbsp; | 3<br/>&nbsp; | 4<br/>&nbsp; | 5<br/>&nbsp; | 6<br/>&nbsp; | 7<br/>&nbsp; | 8<br/>&nbsp; | 9<br/>&nbsp; | :<br/>&nbsp; | ;<br/>⬜ | <<br/>⬜ | =<br/>&nbsp; | ><br/>⬜ | ?<br/>&nbsp; |
+| 004x | @<br/>⬜ | A<br/>&nbsp; | B<br/>&nbsp; | C<br/>&nbsp; | D<br/>&nbsp; | E<br/>&nbsp; | F<br/>&nbsp; | G<br/>&nbsp; | H<br/>&nbsp; | I<br/>&nbsp; | J<br/>&nbsp; | K<br/>&nbsp; | L<br/>&nbsp; | M<br/>&nbsp; | N<br/>&nbsp; | O<br/>&nbsp; |
+| 005x | P<br/>&nbsp; | Q<br/>&nbsp; | R<br/>&nbsp; | S<br/>&nbsp; | T<br/>&nbsp; | U<br/>&nbsp; | V<br/>&nbsp; | W<br/>&nbsp; | X<br/>&nbsp; | Y<br/>&nbsp; | Z<br/>&nbsp; | Á<br/>🟧 | É<br/>🟧 | Í<br/>🟧 | Ó<br/>🟧 | Ú<br/>🟧 |
+| 006x | Ü<br/>🟧 | Ñ<br/>🟧 | Ç<br/>🟧 | [<br/>🟧 | \\<br/>🟧 | ]<br/>🟧 | ll<br/>🟥 | …<br/>🟧 | ‟<br/>🟧 | a<br/>🟧 | b<br/>🟧 | c<br/>🟧 | d<br/>🟧 | e<br/>🟧 | f<br/>🟧 | g<br/>🟧 |
+| 007x | h<br/>🟧 | i<br/>🟧 | j<br/>🟧 | k<br/>🟧 | l<br/>🟧 | m<br/>🟧 | n<br/>🟧 | o<br/>🟧 | p<br/>🟧 | q<br/>🟧 | r<br/>🟧 | s<br/>🟧 | t<br/>🟧 | u<br/>🟧 | v<br/>🟧 | w<br/>🟧 |
+| 008x | x<br/>🟧 | y<br/>🟧 | z<br/>🟧 | á<br/>🟧 | é<br/>🟧 | í<br/>🟧 | ó<br/>🟧 | ú<br/>🟧 | ü<br/>🟧 | ñ<br/>🟧 | ç<br/>🟧 | {<br/>🟧 | ¦<br/>🟧 | }<br/>🟧 | ˜<br/>🟧 | ¿<br/>🟧 |
+| 009x | ¡<br/>🟧 | ｢<br/>🟧 | ｣<br/>🟧 | ○<br/>🟧 | ●<br/>🟧 | ×<br/>🟧 | <br/>⬛ | ‥<br/>🟧 | <br/>⬛ | ･<br/>🟧 | 🡅<br/>🟧 | 🡇<br/>🟧 | 🡄<br/>🟧 | 🡆<br/>🟧 | ▼<br/>🟧 | ♥︎<br/>🟧 |
+
+* 0066 [ll] Two small L; no equivalent codepoint in Unicode, thus omitted
+* 0067 […] Represents U+2026 HORIZONTAL ELLIPSIS […]
+* 0068 [‟] Might represent U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK; unused in any language as far as I know
+- 0091 [｢] Represents U+FF62 HALFWIDTH LEFT CORNER BRACKET [｢]
+- 0092 [｣] Represents U+FF63 HALFWIDTH RIGHT CORNER BRACKET [｣]
+* 0093 [○] Represents U+25CB WHITE CIRCLE [○]
+* 0094 [●] Represents U+25CF BLACK CIRCLE [●]
+* 0095 [×] Represents U+00D7 MULTIPLICATION SIGN [×]
+- 0097 [‥] Represents U+2025 TWO DOT LEADER [‥]
+- 0099 [･] Represents U+FF65 HALFWIDTH KATAKANA MIDDLE DOT [･]; an alternative might be U+2022 BULLET [•], the black small circle
+- 009E [▼] Represents U+25BC BLACK DOWN-POINTING TRIANGLE [▼]
+- 009F [♥︎] Represents U+2665 BLACK HEART SUIT [♥︎]; an alternative might be U+2764 HEAVY BLACK HEART [❤︎], the emoji red heart
+
+## Encoding Schemes
+
 When converting from Unicode to cartridge, more than one Unicode codepoint can be mapped to one cartridge codepoint. On the other hand, when converting from cartridge to Unicode, only one Unicode codepoint will be assigned. For example, the ASCII A and the full-width A will both be mapped to the cartridge A. In reverse, the cartridge A will only be mapped to the ASCII A and not the full-width A.
 
 **Remarks**
 
 Characters in the ASCII range
 
-- The different language encodings basically follow the ASCII encoding, followed by a number of additional characters in the range from 007F to 009F. The only exception is the Spanish encoding where the lower case characters happen to be shifted.
+- The different language encodings basically correspond to the ASCII encoding, followed by a number of additional characters in the range from 007F to 009F. The only exception is the Spanish encoding where the lower case characters happen to be shifted.
 - When converting from cartridge to Unicode, the character in the ASCII range is chosen over any other variants.
 - The only exception is the Japanese full-width encoding, which chooses the full-width character over the others.
 - There is also a small number of characters in the ASCII range where the visual glyph used in the cartridge encoding actually resembles a Unicode character outside of the ASCII range. In particular, these characters are the asterisk operator, the minus sign, the broken bar, and the small tilde. Yet, when converting back, the codepoint from the ASCII range is to be used.
 
 Hiragana, Katakana and Kanji
 
-- All hiragana and katakana are being encoded, however, kanji are not supported. This includes the three kanji for time/month/day in the ASCII range as well.
+- All hiragana and katakana are being encoded, however, kanji are not supported at the moment. This includes the three kanji for time/month/day in the ASCII range as well.
 
 Other Characters
 
@@ -39,7 +271,7 @@ Japanese
 5. Japanese specific characters (other range)
 6. Hiragana and katakana characters
 
-### Basic ASCII
+### Basic Latin (ASCII)
 
 | Cartridge | Unicode |
 | --- | --- |
@@ -341,7 +573,7 @@ Japanese
 | 02CC [🡇] | U+2193 DOWNWARDS ARROW [↓]<br/>U+2B07 DOWNWARDS BLACK ARROW [⬇︎]<br/>U+FFEC HALFWIDTH DOWNWARDS ARROW [￬]<br/>U+1F847 DOWNWARDS HEAVY ARROW [🡇] |
 | 0313 [🡅] | U+2191 UPWARDS ARROW [↑]<br/>U+2B06 UPWARDS BLACK ARROW [⬆︎]<br/>U+FFEA HALFWIDTH UPWARDS ARROW [￪]<br/>U+1F845 UPWARDS HEAVY ARROW [🡅] |
 
-(1) Kanji are not being encoded for now
+(1) Kanji are deliberately not encoded
 
 ### English Additions
 
@@ -365,7 +597,7 @@ Japanese
 | 008E | N/A |
 | 008F | N/A (1) |
 
-(1) & is already encoded at 0026 [&]
+(1) The ampersand is already encoded at 0026 [&]
 
 ### French Additions
 
@@ -573,14 +805,15 @@ This is a list of all characters in the range from 0020 to 009F by language as t
 
 **Remarks**
 
-- Problematic characters are marked with a red square. They are exempt from encoding.
+- The English encoding is identical with ASCII.
 - Japanese uses full-width characters.
-- Selected characters of the Japanese encoding beyond 009F are listed separately.
-- Furthermore, Japanese kana and kanji are listed as N/A.
+- Special characters of the Japanese encoding beyond 009F are listed separately.
+- Furthermore, Japanese kana and kanji are marked as N/A.
+- Problematic characters are marked with a red square. They are exempt from encoding.
 
 | | Japanese | English | German | French | Italian | Spanish |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 0020 | 　 |   |   |   |   |   |
+| 0020 | *IDSP* | *SP* | *SP* | *SP* | *SP* | *SP* |
 | 0021 | ！ | ! | ! | ! | ! | ! |
 | 0022 | ” | " | " | " | " | " |
 | 0023 | “ | # | # | # | # | # |
