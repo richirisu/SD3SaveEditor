@@ -62,7 +62,7 @@ This document describes the character encoding details of the new multilingual r
 - F8 [œ] Represents U+0153 LATIN SMALL LIGATURE OE [œ] and Replaces U+00F8 LATIN SMALL LETTER O WITH STROKE [ø]
 - FF [ẞ] Represents U+1E9E LATIN CAPITAL LETTER SHARP S [ẞ]
 
-## Encoding Scheme
+## Encoding Scheme (World)
 
 **Remarks**
 
@@ -369,14 +369,14 @@ Multilingual Release
 
 (*) The typographic quotation marks are encoded at codepoints 22 [“], 23 [”], 26 [‘], 27 [’] and again at A3 [‘], A4 [’], A5 [“], A6 [”]. The straight quotation marks, normally encoded at 22 and 27, are now found at codepoints A7 ['] and A8 ["].
 
-## Appendix A: Comparison of All Characters by Language
+## Appendix A: Comparison of All Characters by Language (World)
 
-This is a list of all characters in the range from 0020 to 007F by language as they appear in-game.
+This is a list of all characters in the range from 0020 to 00FF by language as they appear in-game.
 
 **Remarks**
 
 - Japanese uses full-width characters.
-- Special characters of the Japanese encoding beyond 007F are listed in a separate table below.
+- Special characters of the Japanese encoding beyond 00FF are listed in a separate table below.
 - Furthermore, Japanese kana and kanji are marked as N/A.
 - For comparison the Latin-1 encoding is also provided.
 
@@ -643,4 +643,3 @@ This is the in-game name selection screen for the multilingual version.
 - The low single quotation mark is actually the normal comma. It uses the same codepoint.
 - The low double quotation mark has its own codepoint. No issues here.
 - The single and double quotation mark seems to be listed twice, however the right-most ones are actually the apostrophe and quotation mark from the ASCII range. They just have the same visual representation, so to speak.
-
